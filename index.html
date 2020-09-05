@@ -2,14 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>YouTube Video</title>
+    <title>Olivia has a crazy dad</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+     $(document).ready(function() {
+     var nextletter ="";
+     function getUrlVars()
+     {
+     	var vars = [], hash;
+     	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+     	for(var i = 0; i < hashes.length; i++)
+     	{
+     		hash = hashes[i].split('=');
+     		vars.push(hash[0]);
+     		vars[hash[0]] = hash[1];
+     	}
+     	return vars;
+     }
+       var letter = getUrlVars()['letter'];
+       if (typeof letter == "undefined") {
+           letter ="A";
+       }
+       video = ""
+       switch (letter) {
+          case  "A":
+                // video A: v9wRfb1Oz0w
+                video = "http://www.youtube.com/embed/v9wRfb1Oz0w?autoplay=1&showinfo=0&controls=0";
+                nextletter = "E";
+                break;
+          case  "E":
+                // video E: rW5fLdmnJkY
+                video = "http://www.youtube.com/embed/rW5fLdmnJkY?autoplay=1&showinfo=0&controls=0";
+                nextletter = "I";
+                break;
+          case  "I":
+                // video I: VEV1AVLQGBE
+                video = "http://www.youtube.com/embed/VEV1AVLQGBE?autoplay=1&showinfo=0&controls=0";
+                nextletter = "O";
+                break;
+          case  "O":
+                // video O: Tjf-cdcezrs
+                video = "http://www.youtube.com/embed/Tjf-cdcezrs?autoplay=1&showinfo=0&controls=0";
+                nextletter = "U";
+                break;
+          case  "U":
+       		// video U: 7MO1ppulWC4
+                video = "http://www.youtube.com/embed/7MO1ppulWC4?autoplay=1&showinfo=0&controls=0";
+                nextletter = "A";
+                break;
+        }
+          
+       var iFrame = $('#olivia');
+       iFrame.attr('src', video);
+       iFrame.attr('src', iFrame.attr('src'));
+       // video yes: 6h1vVatCmD0
+       // video no: jpwCXm4ry9A 
+       
+       $('#yes').on('click',function(){
+         var iFrame = $('#olivia');
+         iFrame.attr('src', "http://www.youtube.com/embed/6h1vVatCmD0?autoplay=1&showinfo=0&controls=0");
+         iFrame.attr('src', iFrame.attr('src'));
+         setTimeout(() => { $(location).attr('href', 'index.html?letter=' + nextletter);  }, 7000);
+       });
+       $('#no').on('click',function(){
+         var iFrame = $('#olivia');
+         iFrame.attr('src', "http://www.youtube.com/embed/jpwCXm4ry9A?autoplay=1&showinfo=0&controls=0");
+         iFrame.attr('src', iFrame.attr('src'));
+         setTimeout(() => { $(location).attr('href', 'index.html?letter=' + letter);  }, 8000);
+       });
+     });
+</script>
 </head>
-<body>
-    <h2> Olivia & the vowels </h2>
-
-    <video  controls="false">
-    <iframe style="display:block; margin: 0 auto;" width="420" height="345" src="http://youtube.com/embed/YE7VzlLtp-4"> </iframe>
-    </video>
+<body style="width: 100%; height: 100%; background-color: pink;">
+    <h1 style="text-align: center;"> Olivia & Which vowels is this one? </h1>
+     <iframe id='olivia' type="text/html" style="display:block; margin: 0 auto;"
+     width="640" height="385" src="http://www.youtube.com/embed/v9wRfb1Oz0w?autoplay=1" frameborder="0">
+     </iframe>
+     <br/>
+      <div style="width:100%;">
+      <h1 style="text-align: center;"> Was Olivia's answer correct? </h1>
+      </div>
+      <div style="width:100%;">
+  	<div id="yes" style="width:50%; float:left;  background-color: green;">
+          <h2 style="text-align: center;"><a href="#">YES</a></h2>
+          </div>
+  	<div id="no" style="width:50%; float:right;  background-color: blue;">
+		<h2 style="text-align: center;">NO</h2>
+	</div>
+      </div>
+     <br/>
 
 </body>
 </html>

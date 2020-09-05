@@ -27,27 +27,27 @@
        switch (letter) {
           case  "A":
                 // video A: v9wRfb1Oz0w
-                video = "http://www.youtube.com/embed/v9wRfb1Oz0w?autoplay=1&showinfo=0&controls=0";
+                video = "https://www.youtube.com/embed/v9wRfb1Oz0w?autoplay=1&showinfo=0&controls=0";
                 nextletter = "E";
                 break;
           case  "E":
                 // video E: rW5fLdmnJkY
-                video = "http://www.youtube.com/embed/rW5fLdmnJkY?autoplay=1&showinfo=0&controls=0";
+                video = "https://www.youtube.com/embed/rW5fLdmnJkY?autoplay=1&showinfo=0&controls=0";
                 nextletter = "I";
                 break;
           case  "I":
                 // video I: VEV1AVLQGBE
-                video = "http://www.youtube.com/embed/VEV1AVLQGBE?autoplay=1&showinfo=0&controls=0";
+                video = "https://www.youtube.com/embed/VEV1AVLQGBE?autoplay=1&showinfo=0&controls=0";
                 nextletter = "O";
                 break;
           case  "O":
                 // video O: Tjf-cdcezrs
-                video = "http://www.youtube.com/embed/Tjf-cdcezrs?autoplay=1&showinfo=0&controls=0";
+                video = "https://www.youtube.com/embed/Tjf-cdcezrs?autoplay=1&showinfo=0&controls=0";
                 nextletter = "U";
                 break;
           case  "U":
        		// video U: 7MO1ppulWC4
-                video = "http://www.youtube.com/embed/7MO1ppulWC4?autoplay=1&showinfo=0&controls=0";
+                video = "https://www.youtube.com/embed/7MO1ppulWC4?autoplay=1&showinfo=0&controls=0";
                 nextletter = "A";
                 break;
         }
@@ -60,13 +60,13 @@
        
        $('#yes').on('click',function(){
          var iFrame = $('#olivia');
-         iFrame.attr('src', "http://www.youtube.com/embed/6h1vVatCmD0?autoplay=1&showinfo=0&controls=0");
+         iFrame.attr('src', "https://www.youtube.com/embed/6h1vVatCmD0?autoplay=1&showinfo=0&controls=0");
          iFrame.attr('src', iFrame.attr('src'));
          setTimeout(() => { $(location).attr('href', 'index.html?letter=' + nextletter);  }, 7000);
        });
        $('#no').on('click',function(){
          var iFrame = $('#olivia');
-         iFrame.attr('src', "http://www.youtube.com/embed/jpwCXm4ry9A?autoplay=1&showinfo=0&controls=0");
+         iFrame.attr('src', "https://www.youtube.com/embed/jpwCXm4ry9A?autoplay=1&showinfo=0&controls=0");
          iFrame.attr('src', iFrame.attr('src'));
          setTimeout(() => { $(location).attr('href', 'index.html?letter=' + letter);  }, 8000);
        });

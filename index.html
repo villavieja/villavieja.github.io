@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Olivia has a crazy dad</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
     <script>
      $(document).ready(function() {
      var nextletter ="";
@@ -83,12 +86,13 @@
       <h1 style="text-align: center;"> Was Olivia's answer correct? </h1>
       </div>
       <div style="width:100%;">
-  	<div id="yes" style="width:50%; float:left;  background-color: green;">
-          <h2 style="text-align: center;"><a href="#">YES</a></h2>
-          </div>
-  	<div id="no" style="width:50%; float:right;  background-color: blue;">
-		<h2 style="text-align: center;">NO</h2>
-	</div>
+        <div class="row">
+    <div class="col-6 align-self-center">
+      <button id="yes" type="button" class="btn btn-success btn-lg btn-block">YES</button>
+    </div>
+    <div class="col-6 align-self-center">
+      <button id="no" type="button" class="btn btn-danger btn-lg btn-block">NO</button>
+    </div>
       </div>
      <br/>
 
